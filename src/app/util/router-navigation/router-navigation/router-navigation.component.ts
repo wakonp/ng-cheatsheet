@@ -1,4 +1,11 @@
-import { Component, Optional, SkipSelf, ViewChild } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit,
+  Optional,
+  SkipSelf,
+  ViewChild,
+} from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -14,18 +21,15 @@ import { MatSidenav } from '@angular/material/sidenav';
   templateUrl: './router-navigation.component.html',
   styleUrls: ['./router-navigation.component.scss'],
 })
-export class RouterNavigationComponent {
+export class RouterNavigationComponent implements OnInit, OnDestroy {
+  @ViewChild(MatSidenav) sideNav: MatSidenav | undefined = undefined;
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(
       map((result) => result.matches),
       shareReplay()
     );
-  childSideNavigations: MatSidenav[] = [];
-
-  @ViewChild(MatSidenav) set sideNav(sideNav: MatSidenav) {
-    this.mainNavigation.childSideNavigations.push(sideNav);
-  }
+  childNavigations: RouterNavigationComponent[] = [];
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -49,6 +53,14 @@ export class RouterNavigationComponent {
   get routeConfig(): RouterNavigationRoute | null {
     return this.activatedRoute.routeConfig as RouterNavigationRoute | null;
   }
+  private get activeChildNavigationName() {
+    return this.activatedRoute.firstChild?.snapshot.data?.navigationMenuOptions
+      ?.name;
+  }
+  private get activeParentNavigationName() {
+    return this.activatedRoute.parent?.snapshot.data?.navigationMenuOptions
+      ?.name;
+  }
 
   get navigationMenuName() {
     return this.hasParentNavigation && this.activeParentNavigationName
@@ -66,16 +78,11 @@ export class RouterNavigationComponent {
     );
   }
 
-  private get activeChildNavigationName() {
-    return this.activatedRoute.firstChild?.snapshot.data?.navigationMenuOptions
-      ?.name;
+  ngOnInit() {
+    this.mainNavigation.childNavigations.push(this);
   }
-  private get activeParentNavigationName() {
-    return this.activatedRoute.parent?.snapshot.data?.navigationMenuOptions
-      ?.name;
-  }
-
-  toggleNavigation() {
-    this.childSideNavigations.forEach((s) => s.toggle());
+  ngOnDestroy() {
+    this.mainNavigation.childNavigations =
+      this.mainNavigation.childNavigations.filter((c) => c !== this);
   }
 }

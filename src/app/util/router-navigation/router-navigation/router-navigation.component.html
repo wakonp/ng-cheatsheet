@@ -1,6 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav
-    #drawer
     class="sidenav"
     [fixedInViewport]="!hasParentNavigation"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -20,15 +19,9 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar *ngIf="!hasParentNavigation" color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="toggleNavigation()"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>{{ navigationTitle }}</span>
+      <app-navigation-menu
+        [navigationItems]="childNavigations"
+      ></app-navigation-menu>
     </mat-toolbar>
     <div class="content-wrapper">
       <router-outlet></router-outlet>
