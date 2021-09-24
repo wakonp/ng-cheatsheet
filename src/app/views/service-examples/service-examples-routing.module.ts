@@ -7,23 +7,48 @@ const routes: Routes = [
     path: '',
     component: RouterNavigationComponent,
     children: [
-      // {
-      //   path: 'guard-examples',
-      //   loadChildren: () =>
-      //     import('./guard-examples/guard-examples.module').then(
-      //       (m) => m.GuardExamplesModule
-      //     ),
-      //   data: {
-      //     navigationMenuOptions: {
-      //       name: $localize`Guards`,
-      //     },
-      //   },
-      // },
-      // {
-      //   path: '',
-      //   redirectTo: 'guard-examples',
-      //   pathMatch: 'full',
-      // },
+      {
+        path: 'component-communication-examples',
+        loadChildren: () =>
+          import(
+            './component-communication-examples/component-communication-examples.module'
+          ).then((m) => m.ComponentCommunicationExamplesModule),
+        data: {
+          navigationMenuOptions: {
+            name: $localize`Component Communication`,
+          },
+        },
+      },
+      {
+        path: 'injection-examples',
+        loadChildren: () =>
+          import('./injection-examples/injection-examples.module').then(
+            (m) => m.InjectionExamplesModule
+          ),
+        data: {
+          navigationMenuOptions: {
+            name: $localize`Injection`,
+          },
+        },
+      },
+      {
+        path: 'factory-examples',
+        loadChildren: () =>
+          import('./factory-examples/factory-examples.module').then(
+            (m) => m.FactoryExamplesModule
+          ),
+        data: {
+          navigationMenuOptions: {
+            name: $localize`Factory`,
+          },
+        },
+      },
+
+      {
+        path: '',
+        redirectTo: 'component-communication-examples',
+        pathMatch: 'full',
+      },
     ],
   },
 ];

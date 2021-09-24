@@ -2,13 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ChangeDetectionExamplesRoutingModule } from './change-detection-examples-routing.module';
-import { RouterExamplesRoutingModule } from '../../router-examples/router-examples-routing.module';
+import { ChangeDetectionExamplesComponent } from './change-detection-examples.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ChangeDetectionExamplesRoutingModule,
-    RouterExamplesRoutingModule,
-  ],
+  declarations: [ChangeDetectionExamplesComponent],
+  imports: [CommonModule, ChangeDetectionExamplesRoutingModule],
 })
 export class ChangeDetectionExamplesModule {}

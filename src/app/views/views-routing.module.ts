@@ -57,6 +57,19 @@ const routes: RouterNavigationRoutes = [
         },
       },
       {
+        path: 'animation-examples',
+        loadChildren: () =>
+          import('./animation-examples/animation-examples.module').then(
+            (m) => m.AnimationExamplesModule
+          ),
+        data: {
+          navigationMenuOptions: {
+            name: $localize`Animations`,
+          },
+        },
+      },
+
+      {
         path: '',
         redirectTo: 'component-examples',
         pathMatch: 'full',

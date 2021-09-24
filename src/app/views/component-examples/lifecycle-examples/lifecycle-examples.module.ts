@@ -2,13 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LifecycleExamplesRoutingModule } from './lifecycle-examples-routing.module';
-import { RouterExamplesRoutingModule } from '../../router-examples/router-examples-routing.module';
+import { LifecycleExamplesComponent } from './lifecycle-examples.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    LifecycleExamplesRoutingModule,
-    RouterExamplesRoutingModule,
-  ],
+  declarations: [LifecycleExamplesComponent],
+  imports: [CommonModule, LifecycleExamplesRoutingModule],
 })
 export class LifecycleExamplesModule {}

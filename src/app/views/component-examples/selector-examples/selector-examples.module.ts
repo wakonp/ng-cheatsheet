@@ -2,13 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SelectorExamplesRoutingModule } from './selector-examples-routing.module';
-import { RouterExamplesRoutingModule } from '../../router-examples/router-examples-routing.module';
+import { SelectorExamplesComponent } from './selector-examples.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SelectorExamplesRoutingModule,
-    RouterExamplesRoutingModule,
-  ],
+  declarations: [SelectorExamplesComponent],
+  imports: [CommonModule, SelectorExamplesRoutingModule],
 })
 export class SelectorExamplesModule {}

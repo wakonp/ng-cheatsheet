@@ -7,23 +7,35 @@ const routes: Routes = [
     path: '',
     component: RouterNavigationComponent,
     children: [
-      // {
-      //   path: 'guard-examples',
-      //   loadChildren: () =>
-      //     import('./guard-examples/guard-examples.module').then(
-      //       (m) => m.GuardExamplesModule
-      //     ),
-      //   data: {
-      //     navigationMenuOptions: {
-      //       name: $localize`Guards`,
-      //     },
-      //   },
-      // },
-      // {
-      //   path: '',
-      //   redirectTo: 'guard-examples',
-      //   pathMatch: 'full',
-      // },
+      {
+        path: 'structural-directive-examples',
+        loadChildren: () =>
+          import(
+            './structural-directive-examples/structural-directive-examples.module'
+          ).then((m) => m.StructuralDirectiveExamplesModule),
+        data: {
+          navigationMenuOptions: {
+            name: $localize`Structural Directives`,
+          },
+        },
+      },
+      {
+        path: 'component-extension-examples',
+        loadChildren: () =>
+          import(
+            './component-extension-examples/component-extension-examples.module'
+          ).then((m) => m.ComponentExtensionExamplesModule),
+        data: {
+          navigationMenuOptions: {
+            name: $localize`Component Extension`,
+          },
+        },
+      },
+      {
+        path: '',
+        redirectTo: 'structural-directive-examples',
+        pathMatch: 'full',
+      },
     ],
   },
 ];

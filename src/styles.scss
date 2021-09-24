@@ -29,10 +29,24 @@ $ng-cheatsheet-theme: mat.define-light-theme(
   )
 );
 
+$ng-cheatsheet-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $ng-cheatsheet-primary,
+      accent: $ng-cheatsheet-accent,
+      warn: $ng-cheatsheet-warn,
+    ),
+  )
+);
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($ng-cheatsheet-theme);
+
+body.dark-mode {
+  @include mat.all-component-themes($ng-cheatsheet-dark-theme);
+}
 
 html,
 body {

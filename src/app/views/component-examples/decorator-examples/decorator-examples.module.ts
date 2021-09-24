@@ -2,13 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DecoratorExamplesRoutingModule } from './decorator-examples-routing.module';
-import { RouterExamplesRoutingModule } from '../../router-examples/router-examples-routing.module';
+import { DecoratorExamplesComponent } from './decorator-examples.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    DecoratorExamplesRoutingModule,
-    RouterExamplesRoutingModule,
-  ],
+  declarations: [DecoratorExamplesComponent],
+  imports: [CommonModule, DecoratorExamplesRoutingModule],
 })
 export class DecoratorExamplesModule {}
