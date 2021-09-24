@@ -16,6 +16,6 @@ jobs:
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN  }}
           build_configuration: production
-          base_href: /angular-highlight-search-pipe/
+          base_href: /ng-cheatsheet/
           deploy_branch: gh-pages
           angular_dist_build_folder: dist/ng-cheatsheet
