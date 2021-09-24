@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    class="sidenav"
+    [fixedInViewport]="!hasParentNavigation"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>{{ navigationMenuName }}</mat-toolbar>
+    <mat-nav-list>
+      <a
+        mat-list-item
+        *ngFor="let navigationRoute of navigationRoutes"
+        [routerLink]="navigationRoute.path"
+        routerLinkActive="mat-list-item-active"
+        >{{ (navigationRoute.data?.navigationMenuOptions)!.name }}</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar *ngIf="!hasParentNavigation" color="primary">
+      <app-navigation-menu
+        [navigationItems]="childNavigations"
+      ></app-navigation-menu>
+      <div style="flex: 1 1 auto"></div>
+      <app-theme-toggle></app-theme-toggle>
+    </mat-toolbar>
+    <div class="content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

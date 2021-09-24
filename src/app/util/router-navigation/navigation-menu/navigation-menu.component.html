@@ -1,0 +1,7 @@
+<ul class="menu-items">
+  <li *ngFor="let navigationItem of navigationItems">
+    <button mat-button (click)="navigationItem.sideNav?.toggle()">
+      {{ navigationItem.navigationTitle }}
+    </button>
+  </li>
+</ul>
