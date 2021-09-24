@@ -7,23 +7,48 @@ const routes: Routes = [
     path: '',
     component: RouterNavigationComponent,
     children: [
-      // {
-      //   path: 'resolver-examples',
-      //   loadChildren: () =>
-      //     import('./resolver-examples/resolver-examples.module').then(
-      //       (m) => m.ResolverExamplesModule
-      //     ),
-      //   data: {
-      //     navigationMenuOptions: {
-      //       name: $localize`Resolver`,
-      //     },
-      //   },
-      // },
-      // {
-      //   path: '',
-      //   redirectTo: 'guard-examples',
-      //   pathMatch: 'full',
-      // },
+      {
+        path: 'stagger-examples',
+        loadChildren: () =>
+          import('./stagger-examples/stagger-examples.module').then(
+            (m) => m.StaggerExamplesModule
+          ),
+        data: {
+          navigationMenuOptions: {
+            name: $localize`Stagger`,
+          },
+        },
+      },
+      {
+        path: 'transition-examples',
+        loadChildren: () =>
+          import('./transition-examples/transition-examples.module').then(
+            (m) => m.TransitionExamplesModule
+          ),
+        data: {
+          navigationMenuOptions: {
+            name: $localize`Transition`,
+          },
+        },
+      },
+      {
+        path: 'query-examples',
+        loadChildren: () =>
+          import('./query-examples/query-examples.module').then(
+            (m) => m.QueryExamplesModule
+          ),
+        data: {
+          navigationMenuOptions: {
+            name: $localize`Query`,
+          },
+        },
+      },
+
+      {
+        path: '',
+        redirectTo: 'stagger-examples',
+        pathMatch: 'full',
+      },
     ],
   },
 ];
