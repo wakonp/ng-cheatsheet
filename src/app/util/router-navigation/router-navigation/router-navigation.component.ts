@@ -1,4 +1,4 @@
-import { Component, Optional, SkipSelf } from '@angular/core';
+import { Component, Optional, SkipSelf, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -7,6 +7,7 @@ import {
   NavigationRoute,
   RouterNavigationRoute,
 } from '../shared/router-navigation-route';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-router-navigation',
@@ -20,6 +21,11 @@ export class RouterNavigationComponent {
       map((result) => result.matches),
       shareReplay()
     );
+  childSideNavigations: MatSidenav[] = [];
+
+  @ViewChild(MatSidenav) set sideNav(sideNav: MatSidenav) {
+    this.mainNavigation.childSideNavigations.push(sideNav);
+  }
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -30,8 +36,16 @@ export class RouterNavigationComponent {
   ) {}
 
   get hasParentNavigation() {
-    return !!this.parentNavigation;
+    return this.parentNavigation != null;
   }
+  get mainNavigation(): RouterNavigationComponent {
+    let instance: RouterNavigationComponent = this;
+    while (instance.parentNavigation !== null) {
+      instance = instance.parentNavigation;
+    }
+    return instance;
+  }
+
   get routeConfig(): RouterNavigationRoute | null {
     return this.activatedRoute.routeConfig as RouterNavigationRoute | null;
   }
@@ -59,5 +73,9 @@ export class RouterNavigationComponent {
   private get activeParentNavigationName() {
     return this.activatedRoute.parent?.snapshot.data?.navigationMenuOptions
       ?.name;
+  }
+
+  toggleNavigation() {
+    this.childSideNavigations.forEach((s) => s.toggle());
   }
 }
