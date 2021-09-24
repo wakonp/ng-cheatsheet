@@ -1,0 +1,10 @@
+<button
+  mat-icon-button
+  (click)="toggleMode()"
+  aria-label="Toggle Dark/Light Mode"
+>
+  <ng-container [ngSwitch]="darkMode">
+    <mat-icon *ngSwitchCase="true">dark_mode</mat-icon>
+    <mat-icon *ngSwitchCase="false">light_mode</mat-icon>
+  </ng-container>
+</button>
