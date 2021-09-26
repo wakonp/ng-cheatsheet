@@ -10,9 +10,10 @@ import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
+import { GithubProjectLinkComponent } from './github-project-link/github-project-link.component';
 
 @NgModule({
-  declarations: [RouterNavigationComponent, NavigationMenuComponent, ThemeToggleComponent],
+  declarations: [RouterNavigationComponent, NavigationMenuComponent, ThemeToggleComponent, GithubProjectLinkComponent],
   imports: [
     CommonModule,
     RouterModule,
