@@ -1,0 +1,131 @@
+{
+  "configVersion": 1,
+  "timestamp": 1632656747830,
+  "index": "/ng-cheatsheet/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/ng-cheatsheet/122.64fe5f2442d769a15afe.js",
+        "/ng-cheatsheet/129.207d71d22d1a8b16f4a0.js",
+        "/ng-cheatsheet/160.01776a7d55e8729c7072.js",
+        "/ng-cheatsheet/24.35c1ec9d4e91b6182ce6.js",
+        "/ng-cheatsheet/266.114b9d3de2a8ab1b2ca7.js",
+        "/ng-cheatsheet/323.7ae30b9c835d1b02f5eb.js",
+        "/ng-cheatsheet/353.0b616afb197877859f47.js",
+        "/ng-cheatsheet/361.2b9a59bec3422a98d515.js",
+        "/ng-cheatsheet/406.7fb8b93d95eac74f66c3.js",
+        "/ng-cheatsheet/431.596aaaff8c0181f1a78c.js",
+        "/ng-cheatsheet/494.34730e55f0f301d9a66a.js",
+        "/ng-cheatsheet/510.668351c2ac4d2f61d80b.js",
+        "/ng-cheatsheet/592.54e79ca78354ecdecc91.js",
+        "/ng-cheatsheet/612.9a567230a36861dfdfda.js",
+        "/ng-cheatsheet/613.6064a805510bd012e8a4.js",
+        "/ng-cheatsheet/640.83ccc9211a048e116efe.js",
+        "/ng-cheatsheet/741.f6f9cd5af40611271c38.js",
+        "/ng-cheatsheet/771.bac674fc487bddbde939.js",
+        "/ng-cheatsheet/781.5abf3e386d218b3d4f7b.js",
+        "/ng-cheatsheet/799.0109efd3ea98e5d6b36e.js",
+        "/ng-cheatsheet/811.0f1560ee7bcb6a3fb829.js",
+        "/ng-cheatsheet/817.34df456c63b3e011b7e8.js",
+        "/ng-cheatsheet/877.c65a649784b41c1292d5.js",
+        "/ng-cheatsheet/904.451bda1f7af72e02f8ba.js",
+        "/ng-cheatsheet/907.799787f72fd4287e96da.js",
+        "/ng-cheatsheet/favicon.ico",
+        "/ng-cheatsheet/index.html",
+        "/ng-cheatsheet/main.355813684218cac42d5c.js",
+        "/ng-cheatsheet/manifest.webmanifest",
+        "/ng-cheatsheet/polyfills.06ab3bb74628719bdb95.js",
+        "/ng-cheatsheet/runtime.62db7341234171b173a2.js",
+        "/ng-cheatsheet/styles.1e706f5960c55286d496.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/ng-cheatsheet/assets/icons/icon-128x128.png",
+        "/ng-cheatsheet/assets/icons/icon-144x144.png",
+        "/ng-cheatsheet/assets/icons/icon-152x152.png",
+        "/ng-cheatsheet/assets/icons/icon-192x192.png",
+        "/ng-cheatsheet/assets/icons/icon-384x384.png",
+        "/ng-cheatsheet/assets/icons/icon-512x512.png",
+        "/ng-cheatsheet/assets/icons/icon-72x72.png",
+        "/ng-cheatsheet/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/ng-cheatsheet/122.64fe5f2442d769a15afe.js": "042dfaa8ba68b3f75cdb9cc14eadb54ae47294f3",
+    "/ng-cheatsheet/129.207d71d22d1a8b16f4a0.js": "380f9e5577d259cbbaa340acc5b9685201d2dede",
+    "/ng-cheatsheet/160.01776a7d55e8729c7072.js": "01700a9abc174e1d4dd73f5f209fa72179601844",
+    "/ng-cheatsheet/24.35c1ec9d4e91b6182ce6.js": "566b4a2fa77c492205ff0d66934c0add5ea68265",
+    "/ng-cheatsheet/266.114b9d3de2a8ab1b2ca7.js": "e6c3d41a546d9e7d833df2edd0390e6af367d53d",
+    "/ng-cheatsheet/323.7ae30b9c835d1b02f5eb.js": "7680a77a8163ac67b1147e020966d0a9b1ed9b4f",
+    "/ng-cheatsheet/353.0b616afb197877859f47.js": "1bbec8b4990568fcc0770264f510608381e7f7f1",
+    "/ng-cheatsheet/361.2b9a59bec3422a98d515.js": "dede1b96b79195f5b7471566c49e1f4c0bef5894",
+    "/ng-cheatsheet/406.7fb8b93d95eac74f66c3.js": "21eaa9869fd0fb81523968dc3fd0ead87dfbc39f",
+    "/ng-cheatsheet/431.596aaaff8c0181f1a78c.js": "fa9c9b95c197f21ae15ac85f4b9aa8bad926006d",
+    "/ng-cheatsheet/494.34730e55f0f301d9a66a.js": "7c2eb9e7bb3a03e421f9ee244b6a477d07d0e0aa",
+    "/ng-cheatsheet/510.668351c2ac4d2f61d80b.js": "782a8ab43fd78080d6a4a2c1bbd7bc876e7966ec",
+    "/ng-cheatsheet/592.54e79ca78354ecdecc91.js": "27e23d42125e79be8e816e1d08e3cfa68aa8fac1",
+    "/ng-cheatsheet/612.9a567230a36861dfdfda.js": "244a387ca54a6891cdcc8d81fcedc79b0bbad6db",
+    "/ng-cheatsheet/613.6064a805510bd012e8a4.js": "70904a35e542e68d1b115e8287e8eeedcb41fcf6",
+    "/ng-cheatsheet/640.83ccc9211a048e116efe.js": "b81218b5ce91fc1ea74f3d09441d2a3b1ae1a301",
+    "/ng-cheatsheet/741.f6f9cd5af40611271c38.js": "0d436a2cb3e2c40dda2dce08664ce3c3734fc6ea",
+    "/ng-cheatsheet/771.bac674fc487bddbde939.js": "a4f59d60df2e1e9c20e6e3afd8a59ca8bbb16eb1",
+    "/ng-cheatsheet/781.5abf3e386d218b3d4f7b.js": "c5f9049a0bf78753dbbac1b983a580a0825150db",
+    "/ng-cheatsheet/799.0109efd3ea98e5d6b36e.js": "7ffd5cf0da3163888ab1dc42e931b7856794882c",
+    "/ng-cheatsheet/811.0f1560ee7bcb6a3fb829.js": "2854f7f2d9358ffbc4889de6d6a5287c59479b57",
+    "/ng-cheatsheet/817.34df456c63b3e011b7e8.js": "c6d0cbd5277ba758cf0c70983d941cc55ea25a8e",
+    "/ng-cheatsheet/877.c65a649784b41c1292d5.js": "e4e855389b9523ac9c78baf6ec43f3ee548a4c57",
+    "/ng-cheatsheet/904.451bda1f7af72e02f8ba.js": "a3f33aeab8e89775c2d757eff06e532f88bce21c",
+    "/ng-cheatsheet/907.799787f72fd4287e96da.js": "9b2327441d5698123d245fefc752cd9b60c754f8",
+    "/ng-cheatsheet/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/ng-cheatsheet/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/ng-cheatsheet/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/ng-cheatsheet/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/ng-cheatsheet/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/ng-cheatsheet/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/ng-cheatsheet/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/ng-cheatsheet/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/ng-cheatsheet/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/ng-cheatsheet/index.html": "608898e4a176e7d046b72873e9398e599f2ddcf4",
+    "/ng-cheatsheet/main.355813684218cac42d5c.js": "ba9ac070d8107ef5345b5222c9785d56e72831fa",
+    "/ng-cheatsheet/manifest.webmanifest": "f159a6ebf796bc9a128b33201918f59af5572156",
+    "/ng-cheatsheet/polyfills.06ab3bb74628719bdb95.js": "31141ba5d484f6434394a3f15ea2d4b72622fd0e",
+    "/ng-cheatsheet/runtime.62db7341234171b173a2.js": "a00b72b16eb427f6407208a5a12fd2a56d113f3c",
+    "/ng-cheatsheet/styles.1e706f5960c55286d496.css": "17a33caf8f305bdab0c0532f0cb4482a345360ea"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
