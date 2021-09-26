@@ -10,3 +10,6 @@ ul li:not(:last-child):after {
   right: 0;
   content: "/";
 }
+span {
+  padding: 0 1rem;
+}
